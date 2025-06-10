@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
+    "remixicon": "^4.6.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.8",
     "@types/lodash": "^4.17.17",
     "@types/node": "^24.0.0",
     "@typescript-eslint/eslint-plugin": "^8.34.0",
@@ -33,7 +33,7 @@
     "eslint-plugin-vue": "^10.2.0",
     "postcss": "^8.5.4",
     "prettier": "^3.5.3",
-    "tailwindcss": "^4.1.8",
+    "tailwindcss": "^3.4.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vue-tsc": "^2.2.8"
