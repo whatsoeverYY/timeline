@@ -33,12 +33,12 @@
 </template>
 
 <script setup lang="ts">
-import { imageData, type MonthlyData } from '@/data';
+import { imageData, type MonthData } from '@/data';
 import { computed } from 'vue';
 
 // 计算总图片数量
 const totalImages = computed(() => {
-    return imageData.reduce((sum: number, month: MonthlyData) => sum + month.count, 0);
+    return imageData.reduce((sum: number, month: MonthData) => sum + month.count, 0);
 });
 
 // 格式化月份显示
