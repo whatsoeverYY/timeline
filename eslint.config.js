@@ -2,7 +2,7 @@ import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
 import * as parserVue from 'vue-eslint-parser'
 import configTypescript from '@vue/eslint-config-typescript'
-import configPrettier from '@vue/eslint-config-prettier'
+import configPrettier from 'eslint-config-prettier'
 
 export default [
   {
@@ -32,14 +32,11 @@ export default [
     rules: {
       // Vue 规则
       'vue/multi-word-component-names': 'off',
-      'vue/no-unused-vars': 'error',
-      'vue/prefer-import-from-vue': 'error',
       'vue/no-v-html': 'warn',
       
       // TypeScript 规则
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/prefer-const': 'error',
       
       // 通用规则
       'no-console': 'warn',
