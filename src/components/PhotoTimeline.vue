@@ -4,7 +4,7 @@
             <!-- 标题区域 -->
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-s-purple-500 mb-4">
-                    <i class="ri-camera-line mr-3"></i>
+                    <i class="ri-camera-fill mr-3"></i>
                     Photo Timeline
                 </h2>
                 <p class="text-xl text-s-gray-70">Your memories since {{ getEarliestYear() }}</p>
