@@ -1,11 +1,12 @@
 import fs from 'fs'
 import path from 'path'
+import process from 'process'
 import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const imageDir = path.join(__dirname, 'src/assets/image')
+const imageDir = path.join(__dirname, 'public/image')
 const outputFile = path.join(__dirname, 'src/data.ts')
 const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']
 
@@ -35,7 +36,7 @@ function scanImageDirectory() {
         })
 
         const details = files.map(file => {
-          const filePath = `@/assets/image/${year}/${month}/${file}`
+          const filePath = `/image/${year}/${month}/${file}`
           const { date, desc } = parseFileName(file)
 
           return {

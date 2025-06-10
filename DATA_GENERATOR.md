@@ -1,6 +1,6 @@
 # 图片数据生成器
 
-这个工具会自动扫描 `src/assets/image` 目录下的图片，并生成 `src/data.ts` 文件。
+这个工具会自动扫描 `public/image` 目录下的图片，并生成 `src/data.ts` 文件。
 
 ## 使用方法
 
@@ -19,7 +19,7 @@ node generate-data.mjs
 图片应该按以下结构组织：
 
 ```
-src/assets/image/
+public/image/
 ├── 2020/
 │   └── 12/
 │       ├── IMG_20201215_185050.jpg
@@ -49,7 +49,7 @@ src/assets/image/
 
 ```typescript
 interface ImageDetail {
-  imagePath: string // 图片路径，如 "@/assets/image/2020/12/IMG_20201215_185050.jpg"
+  imagePath: string // 图片路径，如 "/image/2020/12/IMG_20201215_185050.jpg"
   desc: string // 描述，从文件名提取
   date: string // 日期，格式为 YYYYMMDD
 }
@@ -81,7 +81,7 @@ imageData.forEach(monthData => {
 
 当你添加新图片时，只需要：
 
-1. 按照目录结构放置图片
+1. 按照目录结构放置图片到 `public/image` 目录
 2. 运行 `npm run generate-data`
 3. 数据文件会自动更新
 
@@ -100,3 +100,4 @@ imageData.forEach(monthData => {
 2. 确保图片文件名中包含日期信息以便正确排序
 3. 图片目录结构必须是 `年份/月份` 的格式
 4. 年份必须是 4 位数字，月份必须是 2 位数字（如 `01`, `12`）
+5. 图片文件现在存放在 `public/image` 目录下，这样可以通过 `/image/...` 路径直接访问

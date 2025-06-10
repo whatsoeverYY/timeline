@@ -19,12 +19,12 @@ export const imageData: MonthlyData[] = [
     "count": 2,
     "details": [
       {
-        "imagePath": "@/assets/image/2020/12/IMG_20201215_185050.jpg",
+        "imagePath": "/image/2020/12/IMG_20201215_185050.jpg",
         "desc": "185050",
         "date": "20201215"
       },
       {
-        "imagePath": "@/assets/image/2020/12/IMG_20201216_201237.jpg",
+        "imagePath": "/image/2020/12/IMG_20201216_201237.jpg",
         "desc": "201237",
         "date": "20201216"
       }
@@ -35,7 +35,7 @@ export const imageData: MonthlyData[] = [
     "count": 1,
     "details": [
       {
-        "imagePath": "@/assets/image/2021/03/IMG_20210328_165935.jpg",
+        "imagePath": "/image/2021/03/IMG_20210328_165935.jpg",
         "desc": "165935",
         "date": "20210328"
       }
@@ -46,7 +46,7 @@ export const imageData: MonthlyData[] = [
     "count": 1,
     "details": [
       {
-        "imagePath": "@/assets/image/2021/04/IMG_20210410_144747.jpg",
+        "imagePath": "/image/2021/04/IMG_20210410_144747.jpg",
         "desc": "144747",
         "date": "20210410"
       }
@@ -57,17 +57,17 @@ export const imageData: MonthlyData[] = [
     "count": 3,
     "details": [
       {
-        "imagePath": "@/assets/image/2021/05/IMG_20210515_134255.jpg",
+        "imagePath": "/image/2021/05/IMG_20210515_134255.jpg",
         "desc": "134255",
         "date": "20210515"
       },
       {
-        "imagePath": "@/assets/image/2021/05/IMG_20210515_134300.jpg",
+        "imagePath": "/image/2021/05/IMG_20210515_134300.jpg",
         "desc": "134300",
         "date": "20210515"
       },
       {
-        "imagePath": "@/assets/image/2021/05/IMG_20210520_222955.jpg",
+        "imagePath": "/image/2021/05/IMG_20210520_222955.jpg",
         "desc": "222955",
         "date": "20210520"
       }
@@ -78,7 +78,7 @@ export const imageData: MonthlyData[] = [
     "count": 1,
     "details": [
       {
-        "imagePath": "@/assets/image/2021/10/IMG_20211003_171530.jpg",
+        "imagePath": "/image/2021/10/IMG_20211003_171530.jpg",
         "desc": "171530",
         "date": "20211003"
       }
@@ -89,12 +89,12 @@ export const imageData: MonthlyData[] = [
     "count": 2,
     "details": [
       {
-        "imagePath": "@/assets/image/2022/03/IMG_20220305_212230.jpg",
+        "imagePath": "/image/2022/03/IMG_20220305_212230.jpg",
         "desc": "212230",
         "date": "20220305"
       },
       {
-        "imagePath": "@/assets/image/2022/03/IMG_20220308_153421.jpg",
+        "imagePath": "/image/2022/03/IMG_20220308_153421.jpg",
         "desc": "153421",
         "date": "20220308"
       }
@@ -105,12 +105,12 @@ export const imageData: MonthlyData[] = [
     "count": 2,
     "details": [
       {
-        "imagePath": "@/assets/image/2022/05/IMG_20220508_135134.jpg",
+        "imagePath": "/image/2022/05/IMG_20220508_135134.jpg",
         "desc": "135134",
         "date": "20220508"
       },
       {
-        "imagePath": "@/assets/image/2022/05/IMG_20220508_152901.jpg",
+        "imagePath": "/image/2022/05/IMG_20220508_152901.jpg",
         "desc": "152901",
         "date": "20220508"
       }
@@ -121,7 +121,7 @@ export const imageData: MonthlyData[] = [
     "count": 1,
     "details": [
       {
-        "imagePath": "@/assets/image/2024/08/IMG_20240822_出生啦.jpeg",
+        "imagePath": "/image/2024/08/IMG_20240822_出生啦.jpeg",
         "desc": "出生啦",
         "date": "20240822"
       }

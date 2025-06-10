@@ -10,4 +10,7 @@ export default defineConfig({
       '@': path.resolve(process.cwd(), 'src'),
     },
   },
+  build: {
+    assetsInlineLimit: 0, // 禁用内联，或设置更大的阈值
+  },
 })

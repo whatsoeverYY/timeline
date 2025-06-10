@@ -18,8 +18,8 @@
                     <div v-for="image in monthData.details" :key="image.imagePath"
                         class="image-card bg-white rounded-lg shadow-md overflow-hidden">
                         <div class="aspect-square bg-gray-100 flex items-center justify-center">
-                            <img :src="getImageUrl(image.imagePath)" :alt="image.desc"
-                                class="max-w-full max-h-full object-cover" @error="handleImageError" />
+                            <img :src="image.imagePath" :alt="image.desc" class="max-w-full max-h-full object-cover"
+                                @error="handleImageError" />
                         </div>
                         <div class="p-4">
                             <p class="font-medium text-gray-800">{{ image.desc || '无描述' }}</p>
@@ -58,12 +58,6 @@ const formatDate = (date: string) => {
     const month = date.substring(4, 6);
     const day = date.substring(6, 8);
     return `${year}-${month}-${day}`;
-};
-
-// 获取图片URL（处理@别名）
-const getImageUrl = (imagePath: string) => {
-    // 将 @/assets 替换为实际路径
-    return imagePath.replace('@/', '/src/');
 };
 
 // 处理图片加载错误
