@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: 代码提交规范和版本控制最佳实践
+alwaysApply: true
+---
+
+# 代码提交规范
+
+## 提交信息规范
+- 使用语义化提交信息 (Conventional Commits)
+- 提交信息格式：`type(scope): description`
+- 常用类型：feat, fix, docs, style, refactor, test, chore
+- 保持提交信息简洁明了，使用中文或英文统一
+
+## 提交流程
+- 提交前运行 lint 和格式化
+- 保持提交粒度小而清晰
+- 每个提交应该是一个完整的功能单元
+- 避免提交调试代码和临时文件
+
+## 分支管理
+- 使用 Git Flow 或 GitHub Flow 工作流
+- 功能开发使用 feature 分支
+- 紧急修复使用 hotfix 分支
+- 主分支保持稳定状态
+
+## 代码审查
+- 所有代码变更都应该经过代码审查
+- 审查重点关注代码质量、安全性和性能
+- 提供建设性的反馈意见
+- 确保代码符合项目规范

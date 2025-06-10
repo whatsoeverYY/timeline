@@ -1,0 +1,43 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Vue 组件开发规范和最佳实践
+globs: ["**/*.vue"]
+alwaysApply: false
+---
+
+# Vue 组件开发规范
+
+## 组件编写规范
+- 使用 Composition API 优于 Options API
+- 组件名使用 PascalCase
+- 文件名使用 kebab-case 或 PascalCase，保持一致性
+- 使用 `<script setup>` 语法糖
+- 模板中使用 v-bind 简写语法 (`:`) 和 v-on 简写语法 (`@`)
+- 优先使用组合式函数 (composables) 来共享逻辑
+
+## 组件接口定义
+- 使用 `defineProps` 和 `defineEmits` 宏定义组件接口
+- 为所有 props 和 emits 提供完整的类型定义
+- 避免在 `setup` 中直接修改 props
+- 使用 `provide/inject` 进行深层组件通信
+
+## 组件内部实现
+- 优先使用 `ref` 而非 `reactive`，除非需要解构
+- 使用 `computed` 处理衍生状态
+- 使用 `watch` 和 `watchEffect` 处理副作用
+- 合理使用 Vue 的内置指令和修饰符
+
+## 模板优化
+- 使用 `v-memo` 优化重复渲染
+- 合理使用 `v-once` 减少不必要的重新渲染
+- 避免在模板中使用复杂的表达式，抽取为计算属性
+
+## 样式规范
+- 使用 scoped 样式避免样式冲突
+- 优先使用 CSS 模块或 CSS-in-JS 方案
+- 使用 CSS 变量定义主题色彩
+- 遵循 BEM 命名规范或使用原子化 CSS 框架

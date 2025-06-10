@@ -1,0 +1,41 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Vue.js 性能优化策略和最佳实践
+alwaysApply: false
+---
+
+# Vue.js 性能优化
+
+## 渲染优化
+- 使用 `v-memo` 优化重复渲染
+- 合理使用 `v-once` 减少不必要的重新渲染
+- 使用 `shallowRef` 和 `shallowReactive` 优化大型对象
+- 避免在模板中使用复杂的表达式，抽取为计算属性
+
+## 代码分割
+- 使用异步组件和动态导入进行代码分割
+- 按路由进行代码分割
+- 合理使用 webpack 的 splitChunks 配置
+- 预加载关键资源
+
+## 响应式优化
+- 优先使用 `ref` 而非 `reactive` 处理基础类型
+- 使用 `shallowRef` 处理大型数据结构
+- 避免不必要的深度响应式
+- 合理使用 `markRaw` 标记不需要响应式的对象
+
+## 内存管理
+- 及时清理事件监听器和定时器
+- 避免内存泄漏，正确使用 `onUnmounted`
+- 合理使用 `WeakMap` 和 `WeakSet`
+- 避免创建不必要的响应式数据
+
+## 网络优化
+- 使用请求缓存和去重
+- 实现合理的加载状态管理
+- 使用虚拟滚动处理大列表
+- 合理使用 CDN 和资源压缩
