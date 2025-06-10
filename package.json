@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "format": "prettier --write src/",
-    "generate-data": "node generate-data.mjs"
+    "organize-images": "node scripts/organize-images.mjs",
+    "organize-images:watch": "node scripts/organize-images.mjs --watch"
   },
   "dependencies": {
     "lodash": "^4.17.21",

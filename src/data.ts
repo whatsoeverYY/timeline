@@ -1,5 +1,5 @@
-// 此文件由 generate-data.mjs 自动生成，请勿手动修改
-// 运行 node generate-data.mjs 来重新生成此文件
+// 自动生成的图片数据文件
+// 最后更新时间: 2025/6/10 15:53:18
 
 export interface ImageDetail {
   imagePath: string;
@@ -7,13 +7,13 @@ export interface ImageDetail {
   date: string;
 }
 
-export interface MonthlyData {
+export interface MonthData {
   month: string;
   count: number;
   details: ImageDetail[];
 }
 
-export const imageData: MonthlyData[] = [
+export const imageData: MonthData[] = [
   {
     "month": "2020-12",
     "count": 2,
