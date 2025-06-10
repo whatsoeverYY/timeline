@@ -3,10 +3,10 @@
         <div class="container mx-auto px-4 py-8">
             <!-- 标题区域 -->
             <div class="text-center mb-12">
-                <h1 class="text-4xl font-bold text-s-gray-90 mb-4">
+                <h2 class="text-4xl font-bold text-s-purple-500 mb-4">
                     <i class="ri-camera-line mr-3"></i>
                     Photo Timeline
-                </h1>
+                </h2>
                 <p class="text-xl text-s-gray-70">Your memories since {{ getEarliestYear() }}</p>
             </div>
 
