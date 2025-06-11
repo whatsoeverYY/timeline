@@ -1,5 +1,7 @@
 <template>
-    <div class="main-content w-[70%] bg-white rounded-r-[20px] p-[30px] flex flex-col relative overflow-hidden">
+    <!-- 桌面端主内容区 -->
+    <div
+        class="main-content w-[70%] bg-white rounded-r-[20px] p-[30px] flex flex-col relative overflow-hidden hidden md:flex">
         <!-- Decorative Shapes -->
         <div class="decorative-shapes shape-1"></div>
         <div class="decorative-shapes shape-2"></div>
@@ -113,6 +115,108 @@
                 ]">
                     <i class="ri-skip-forward-fill text-2xl text-white"></i>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端主内容区 -->
+    <div class="main-content-mobile w-full bg-white p-4 flex flex-col relative overflow-hidden flex-1 block md:hidden">
+        <!-- Photo Display Area - 固定高度 -->
+        <div v-if="currentMonthData?.details?.length"
+            class="bg-gray-100 rounded-[16px] overflow-hidden relative shadow-md mb-3 h-[300px] sm:h-[350px] flex items-center justify-center">
+            <div class="w-full h-full relative">
+                <!-- 主图片展示 -->
+                <div class="w-full h-full flex items-center justify-center bg-black rounded-[16px] overflow-hidden">
+                    <img :src="currentImage?.imagePath" :alt="currentImage?.desc"
+                        class="max-w-full max-h-full object-contain transition-all duration-500 ease-in-out"
+                        @error="handleImageError" />
+                </div>
+            </div>
+        </div>
+        <div v-else
+            class="bg-gray-100 rounded-[16px] overflow-hidden relative shadow-md mb-3 h-[300px] sm:h-[350px] flex items-center justify-center">
+            <div
+                class="w-full h-full flex flex-col items-center justify-center text-gray-400 text-center p-4 slide-transition">
+                <i class="ri-gallery-line text-4xl mb-3 text-purple-300"></i>
+                <h3 class="text-lg mb-2 text-gray-500">Your Photo Journey</h3>
+                <p class="text-xs max-w-[90%] text-center">This is where your memories will be displayed. The slideshow
+                    will
+                    automatically start from August 2024.
+                </p>
+            </div>
+        </div>
+
+        <!-- Photo Information - 移动端样式 -->
+        <div class="p-3 bg-purple-50 rounded-2xl mb-3 shadow-sm slide-transition">
+            <div class="flex justify-between items-start mb-2">
+                <div class="flex-1">
+                    <h3 class="text-base text-purple-600 mb-1">Memories</h3>
+                    <p class="text-sm text-gray-500 pr-2">
+                        <template v-if="currentMonthData">
+                            {{ currentImage?.desc }}
+                        </template>
+                        <template v-else>
+                            Start your photo journey from August 2024.
+                        </template>
+                    </p>
+                </div>
+                <!-- Month Indicator - 移动端位置 -->
+                <div class="flex items-center bg-white px-3 py-1.5 rounded-full shadow-sm ml-2">
+                    <i class="ri-calendar-event-fill text-sm text-pink-300"></i>
+                    <span class="font-sans text-purple-600 text-sm ml-1">{{ currentMonthData?.month || 'Timeline'
+                        }}</span>
+                </div>
+            </div>
+            <div class="flex items-center justify-between text-xs text-gray-400">
+                <div class="flex items-center">
+                    <i class="ri-time-line mr-1 text-pink-300"></i>
+                    <span>{{ formatDate(currentImage?.date || '') }}</span>
+                    <span v-if="isPlaying" class="ml-3 flex items-center">
+                        <i class="ri-play-circle-line mr-1 text-green-400"></i>
+                        Playing
+                    </span>
+                </div>
+                <div v-if="currentMonthData?.details?.length" class="text-xs opacity-80">
+                    {{ currentImageIndex + 1 }} / {{ currentMonthData.details.length }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnail Strip - 移动端样式 -->
+        <div v-if="currentMonthData?.details?.length" class="mb-3">
+            <div class="flex space-x-2 justify-start overflow-x-auto pb-2 scrollbar-hide px-1">
+                <div v-for="(image, index) in currentMonthData.details" :key="image.imagePath"
+                    @click="selectImage(index)" :class="[
+                        'flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 border-2',
+                        currentImageIndex === index
+                            ? 'border-purple-400 shadow-lg scale-110'
+                            : 'border-gray-200 hover:border-purple-300'
+                    ]">
+                    <img :src="image.imagePath" :alt="image.desc" class="w-full h-full object-cover"
+                        @error="handleImageError" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls - 移动端样式 -->
+        <div class="flex justify-center items-center gap-2">
+            <div @click="previousImage" :class="[
+                'w-10 h-10 rounded-full bg-gradient-to-br from-pink-200 to-blue-200 flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 ease-in-out active:scale-95',
+                !currentMonthData?.details?.length && 'opacity-50 cursor-not-allowed'
+            ]">
+                <i class="ri-skip-back-fill text-lg text-white"></i>
+            </div>
+            <div @click="togglePlayback" :class="[
+                'w-12 h-12 rounded-full bg-gradient-to-br from-pink-200 to-blue-200 flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 ease-in-out active:scale-95',
+                !currentMonthData?.details?.length && 'opacity-50 cursor-not-allowed'
+            ]">
+                <i :class="isPlaying ? 'ri-pause-fill' : 'ri-play-fill'" class="text-xl text-white"></i>
+            </div>
+            <div @click="nextImage" :class="[
+                'w-10 h-10 rounded-full bg-gradient-to-br from-pink-200 to-blue-200 flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 ease-in-out active:scale-95',
+                !currentMonthData?.details?.length && 'opacity-50 cursor-not-allowed'
+            ]">
+                <i class="ri-skip-forward-fill text-lg text-white"></i>
             </div>
         </div>
     </div>

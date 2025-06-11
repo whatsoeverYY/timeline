@@ -1,6 +1,13 @@
 <template>
     <div class="theme-merry w-[100vw] mx-auto flex justify-center">
-        <div class="container w-[1024px] h-[100vh] flex">
+        <!-- 桌面端布局：水平布局，固定宽度 -->
+        <div class="container w-[1024px] h-[100vh] hidden md:flex">
+            <SideBar />
+            <MainContent />
+        </div>
+
+        <!-- 移动端布局：垂直布局，全宽度 -->
+        <div class="container w-full h-[100vh] flex flex-col md:hidden">
             <SideBar />
             <MainContent />
         </div>
