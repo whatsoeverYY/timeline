@@ -20,12 +20,12 @@ export const imageData: MonthData[] = [
     details: [
       {
         imagePath: '/image/2020/12/IMG_20201215_185050.jpg',
-        desc: '185050',
+        desc: '尹山湖 生日蛋糕',
         date: '20201215',
       },
       {
         imagePath: '/image/2020/12/IMG_20201216_201237.jpg',
-        desc: '201237',
+        desc: '臭臭烧的鸡蛋羹 炒的花生米 红烧鸡爪是谁做的呢 看着真的不错',
         date: '20201216',
       },
     ],

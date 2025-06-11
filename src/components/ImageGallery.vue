@@ -35,6 +35,7 @@
 <script setup lang="ts">
 import { useSelectedDate } from '@/composable/useSelectedDate';
 import { imageData, type MonthData } from '@/data';
+import { formatDate } from '@/util/date';
 import { computed } from 'vue';
 
 const { selectedDate } = useSelectedDate()
@@ -54,15 +55,6 @@ const formatMonth = (month: string) => {
         '七月', '八月', '九月', '十月', '十一月', '十二月'
     ];
     return `${year}年${monthNames[parseInt(monthNum) - 1]}`;
-};
-
-// 格式化日期显示
-const formatDate = (date: string) => {
-    if (!date || date.length !== 8) return date;
-    const year = date.substring(0, 4);
-    const month = date.substring(4, 6);
-    const day = date.substring(6, 8);
-    return `${year}-${month}-${day}`;
 };
 
 // 处理图片加载错误
