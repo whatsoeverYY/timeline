@@ -4,6 +4,25 @@ export default {
   theme: {
     extend: {
       colors: {
+        'tm-pink': {
+          10: '#f9f7fe',
+          20: '#ffeaf1',
+          30: '',
+          40: '#ffd6e0',
+          50: '#ffb6c1',
+        },
+        'tm-blue': {
+          20: '#e4f5ff',
+          40: '#c1e3ff',
+        },
+        'tm-purple': {
+          100: '#c3aed6',
+          500: '#6a5acd',
+        },
+        'tm-gray': {
+          40: '#444',
+          80: '#888',
+        },
         's-blue': {
           10: '#f0f8ff',
           20: '#e6f3ff',

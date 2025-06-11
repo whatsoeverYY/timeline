@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import PhotoTimeline from './components/PhotoTimeline.vue';
+import Container from './components/theme-merry/Container.vue';
 </script>
 
 <template>
-  <PhotoTimeline />
+  <Container />
 </template>
 
 <style scoped>
