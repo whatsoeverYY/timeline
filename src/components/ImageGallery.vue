@@ -8,14 +8,14 @@
             </p>
         </div>
 
-        <div class="space-y-8">
-            <div v-for="monthData in imageData" :key="monthData.month" class="month-section">
+        <div class="space-y-8" v-if="currentMonthData">
+            <div class="month-section">
                 <h2 class="text-2xl font-semibold mb-4 text-blue-600">
-                    {{ formatMonth(monthData.month) }} ({{ monthData.count }} 张)
+                    {{ formatMonth(currentMonthData.month) }} ({{ currentMonthData.count }} 张)
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div v-for="image in monthData.details" :key="image.imagePath"
+                    <div v-for="image in currentMonthData.details" :key="image.imagePath"
                         class="image-card bg-white rounded-lg shadow-md overflow-hidden">
                         <div class="aspect-square bg-gray-100 flex items-center justify-center">
                             <img :src="image.imagePath" :alt="image.desc" class="max-w-full max-h-full object-cover"
@@ -33,9 +33,14 @@
 </template>
 
 <script setup lang="ts">
+import { useSelectedDate } from '@/composable/useSelectedDate';
 import { imageData, type MonthData } from '@/data';
 import { computed } from 'vue';
 
+const { selectedDate } = useSelectedDate()
+const currentMonthData = computed<MonthData | undefined>(() => {
+    return imageData.find(month => month.month === selectedDate.value)
+})
 // 计算总图片数量
 const totalImages = computed(() => {
     return imageData.reduce((sum: number, month: MonthData) => sum + month.count, 0);

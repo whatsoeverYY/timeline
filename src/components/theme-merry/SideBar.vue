@@ -10,19 +10,18 @@
             class="relative before:content-[''] before:absolute before:left-5 before:top-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-tm-pink-40 before:via-cyan-200 before:to-tm-blue-40 before:rounded-full">
             <!-- August 2024 -->
             <MonthItem v-for="data in imageData" :key="data.month" :month="data.month" :count="data.count"
-                :isActive="data.month === currentActive" />
+                :isActive="data.month === selectedDate" @click="setSelectedDate(data.month)" />
 
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import { useSelectedDate } from '@/composable/useSelectedDate';
 import imageData from '@/data';
-import { ref } from 'vue';
 import MonthItem from './MonthItem.vue';
 
-
-const currentActive = ref(imageData[0].month)
+const { selectedDate, setSelectedDate } = useSelectedDate()
 </script>
 
 <style>
