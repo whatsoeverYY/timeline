@@ -40,8 +40,7 @@
                 <i class="ri-gallery-line text-6xl mb-4 text-purple-300"></i>
                 <h3 class="text-xl mb-2.5 text-gray-500">Your Photo Journey</h3>
                 <p class="text-sm max-w-[80%]">This is where your memories will be displayed. The slideshow will
-                    automatically start from August
-                    2024.
+                    automatically start from August 2024.
                 </p>
             </div>
         </div>
@@ -163,8 +162,8 @@
                 <!-- Month Indicator - 移动端位置 -->
                 <div class="flex items-center bg-white px-3 py-1.5 rounded-full shadow-sm ml-2">
                     <i class="ri-calendar-event-fill text-sm text-pink-300"></i>
-                    <span class="font-sans text-purple-600 text-sm ml-1">{{ currentMonthData?.month || 'Timeline'
-                        }}</span>
+                    <span class="font-sans text-purple-600 text-sm ml-1">
+                        {{ currentMonthData?.month || 'Timeline' }}</span>
                 </div>
             </div>
             <div class="flex items-center justify-between text-xs text-gray-400">

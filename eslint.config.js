@@ -1,8 +1,8 @@
 import js from '@eslint/js'
-import pluginVue from 'eslint-plugin-vue'
-import * as parserVue from 'vue-eslint-parser'
 import configTypescript from '@vue/eslint-config-typescript'
 import configPrettier from 'eslint-config-prettier'
+import pluginVue from 'eslint-plugin-vue'
+import * as parserVue from 'vue-eslint-parser'
 
 export default [
   {
@@ -33,16 +33,17 @@ export default [
       // Vue 规则
       'vue/multi-word-component-names': 'off',
       'vue/no-v-html': 'warn',
-      
+
       // TypeScript 规则
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
-      
+
       // 通用规则
-      'no-console': 'warn',
+      'no-console': 'off',
       'no-debugger': 'error',
       'prefer-const': 'error',
       'no-var': 'error',
+      'no-undef': 'off',
     },
   },
-] 
+]
