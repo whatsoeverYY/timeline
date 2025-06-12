@@ -1,5 +1,5 @@
 // 自动生成的图片数据文件
-// 最后更新时间: 2025/6/12 12:20:52
+// 最后更新时间: 2025/6/12 18:01:49
 
 export interface ImageDetail {
   imagePath: string;
@@ -27,12 +27,17 @@ export const imageData: MonthData[] = [
   },
   {
     "month": "2024-08",
-    "count": 1,
+    "count": 2,
     "details": [
       {
         "imagePath": "/image/2024/08/IMG_20240822_出生啦.jpeg",
         "desc": "出生啦",
         "date": "20240822"
+      },
+      {
+        "imagePath": "/image/2024/08/20240830_190750.jpeg",
+        "desc": "",
+        "date": "20240830"
       }
     ]
   },

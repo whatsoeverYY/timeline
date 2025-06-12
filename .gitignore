@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+/src/assets/source
+/src/assets/compressed
+/src/assets/old
+/src/assets/backup

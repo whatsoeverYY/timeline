@@ -54,7 +54,7 @@
             <h3 class="text-lg text-purple-600 mb-1">Memories</h3>
             <p class="text-sm text-gray-500">
                 <template v-if="currentMonthData">
-                    {{ currentImage?.desc }}
+                    {{ getDescription(currentImage) }}
                 </template>
                 <template v-else>
                     Start your photo journey from August 2024. Click play to begin the slideshow or select a specific
@@ -137,7 +137,7 @@
                     <h3 class="text-base text-purple-600 mb-1">Memories</h3>
                     <p class="text-sm text-gray-500 pr-2">
                         <template v-if="currentMonthData">
-                            {{ currentImage?.desc }}
+                            {{ getDescription(currentImage) }}
                         </template>
                         <template v-else>
                             Start your photo journey from August 2024.
@@ -208,6 +208,7 @@
 
 <script setup lang="ts">
 import { useSelectedDate } from '@/composable/useSelectedDate';
+import { descriptions } from '@/constants/descriptions';
 import { imageData, type ImageDetail } from '@/data';
 import { formatDate } from '@/util/date';
 import { computed, onUnmounted, ref, watch } from 'vue';
@@ -229,6 +230,13 @@ const currentImage = computed((): ImageDetail | null => {
     if (!monthData?.details?.length) return null;
     return monthData.details[currentImageIndex.value] || null;
 });
+
+const getDescription = (currentImage: ImageDetail | null) => {
+    console.log(currentImage, 'currentImage');
+    if (!currentImage) return '';
+    const description = descriptions.find(desc => desc.id === currentImage.imagePath);
+    return description?.desc || '';
+}
 
 // 监听选中的月份变化，重置图片索引
 watch(selectedDate, () => {
