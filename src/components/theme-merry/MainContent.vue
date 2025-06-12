@@ -1,7 +1,6 @@
 <template>
     <!-- 桌面端主内容区 -->
-    <div
-        class="main-content w-[70%] bg-white rounded-r-[20px] p-[30px] flex flex-col relative overflow-hidden hidden md:flex">
+    <div class="main-content w-[70%] bg-white rounded-r-[20px] p-[30px] flex flex-col relative overflow-hidden md:flex">
         <!-- Decorative Shapes -->
         <div class="decorative-shapes shape-1"></div>
         <div class="decorative-shapes shape-2"></div>
@@ -17,20 +16,6 @@
                         class="max-w-full max-h-full object-contain transition-all duration-500 ease-in-out"
                         @error="handleImageError" />
                 </div>
-
-                <!-- 图片信息覆盖层 -->
-                <!-- <div
-                    class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-50 text-white p-3 rounded-lg backdrop-blur-sm">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <h4 class="font-medium">{{ currentImage?.desc || 'Untitled' }}</h4>
-                            <p class="text-sm opacity-80">{{ formatDate(currentImage?.date) }}</p>
-                        </div>
-                        <div class="text-sm opacity-80">
-                            {{ currentImageIndex + 1 }} / {{ currentMonthData.details.length }}
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
         <div v-else
@@ -119,7 +104,7 @@
     </div>
 
     <!-- 移动端主内容区 -->
-    <div class="main-content-mobile w-full bg-white p-4 flex flex-col relative overflow-hidden flex-1 block md:hidden">
+    <div class="main-content-mobile w-full bg-white p-4 flex flex-col relative overflow-hidden flex-1 md:hidden">
         <!-- Photo Display Area - 固定高度 -->
         <div v-if="currentMonthData?.details?.length"
             class="bg-gray-100 rounded-[16px] overflow-hidden relative shadow-md mb-3 h-[300px] sm:h-[350px] flex items-center justify-center">

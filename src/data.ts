@@ -1,5 +1,5 @@
 // 自动生成的图片数据文件
-// 最后更新时间: 2025/6/12 10:19:25
+// 最后更新时间: 2025/6/12 12:20:52
 
 export interface ImageDetail {
   imagePath: string;
@@ -19,7 +19,7 @@ export const imageData: MonthData[] = [
     "count": 1,
     "details": [
       {
-        "imagePath": "/image/2024/05/20240512_105541.jpg",
+        "imagePath": "/image/2024/05/20240512_105541.webp",
         "desc": "",
         "date": "20240512"
       }
@@ -41,32 +41,32 @@ export const imageData: MonthData[] = [
     "count": 6,
     "details": [
       {
-        "imagePath": "/image/2024/09/IMG_0002_20240904.jpg",
+        "imagePath": "/image/2024/09/IMG_0002_20240904.webp",
         "desc": "20240904",
         "date": "20240904"
       },
       {
-        "imagePath": "/image/2024/09/IMG_0023_20240904.jpg",
+        "imagePath": "/image/2024/09/IMG_0023_20240904.webp",
         "desc": "20240904",
         "date": "20240904"
       },
       {
-        "imagePath": "/image/2024/09/IMG_0084_20240904.jpg",
+        "imagePath": "/image/2024/09/IMG_0084_20240904.webp",
         "desc": "20240904",
         "date": "20240904"
       },
       {
-        "imagePath": "/image/2024/09/IMG_0128_20240904.jpg",
+        "imagePath": "/image/2024/09/IMG_0128_20240904.webp",
         "desc": "20240904",
         "date": "20240904"
       },
       {
-        "imagePath": "/image/2024/09/IMG_0136_20240904.jpg",
+        "imagePath": "/image/2024/09/IMG_0136_20240904.webp",
         "desc": "20240904",
         "date": "20240904"
       },
       {
-        "imagePath": "/image/2024/09/IMG_0203_20240904.jpg",
+        "imagePath": "/image/2024/09/IMG_0203_20240904.webp",
         "desc": "20240904",
         "date": "20240904"
       }
@@ -77,7 +77,7 @@ export const imageData: MonthData[] = [
     "count": 1,
     "details": [
       {
-        "imagePath": "/image/2024/10/20241013_092522.jpeg",
+        "imagePath": "/image/2024/10/20241013_092522.webp",
         "desc": "",
         "date": "20241013"
       }
@@ -88,7 +88,7 @@ export const imageData: MonthData[] = [
     "count": 1,
     "details": [
       {
-        "imagePath": "/image/2025/01/20250101_144736.jpeg",
+        "imagePath": "/image/2025/01/20250101_144736.webp",
         "desc": "",
         "date": "20250101"
       }

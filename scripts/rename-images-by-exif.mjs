@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import exifr from 'exifr'
 import fs from 'fs'
 import path from 'path'
