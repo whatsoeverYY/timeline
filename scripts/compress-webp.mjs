@@ -147,7 +147,7 @@ async function batchCompressImages() {
     // 检查源目录是否存在
     try {
       await fs.access(SOURCE_DIR)
-    } catch (error) {
+    } catch {
       console.error(`❌ 源目录不存在: ${SOURCE_DIR}`)
       return
     }
