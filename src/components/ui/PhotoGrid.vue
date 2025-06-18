@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ImageDetail } from '../data';
+import type { ImageDetail } from '@/data';
 
 interface Props {
     photos: ImageDetail[]

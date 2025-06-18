@@ -9,17 +9,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/about',
     name: 'About',
-    component: () => import('./components/About.vue'),
+    component: () => import('./pages/About.vue'),
   },
   {
     path: '/compress',
     name: 'Compress',
-    component: () => import('./components/ImageCompress.vue'),
+    component: () => import('./pages/ImageCompress.vue'),
   },
   {
     path: '/ai',
     name: 'AICaption',
-    component: () => import('./components/AICaption.vue'),
+    component: () => import('./pages/AICaption.vue'),
   },
 ]
 

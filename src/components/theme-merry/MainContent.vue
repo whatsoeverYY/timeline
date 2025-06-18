@@ -207,10 +207,10 @@
 </template>
 
 <script setup lang="ts">
-import { useSelectedDate } from '@/composable/useSelectedDate';
+import { useSelectedDate } from '@/composables/useSelectedDate';
 import { descriptions } from '@/constants/descriptions';
 import { imageData, type ImageDetail } from '@/data';
-import { formatDate } from '@/util/date';
+import { formatDate } from '@/utils/date';
 import { computed, onUnmounted, ref, watch } from 'vue';
 
 const { selectedDate } = useSelectedDate();

@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { useSelectedDate } from '@/composable/useSelectedDate';
+import { useSelectedDate } from '@/composables/useSelectedDate';
 import imageData from '@/data';
 import MonthItem from './MonthItem.vue';
 

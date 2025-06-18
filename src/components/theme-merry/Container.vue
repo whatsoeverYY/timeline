@@ -23,8 +23,8 @@
 <script setup lang="ts">
 import MainContent from './MainContent.vue';
 import SideBar from './SideBar.vue';
-import LampCordToggle from '../LampCordToggle.vue';
-import { useTheme } from '@/composable/useTheme';
+import LampCordToggle from '../ui/LampCordToggle.vue';
+import { useTheme } from '@/composables/useTheme';
 
 const { isDarkMode, toggleTheme } = useTheme();
 </script>
