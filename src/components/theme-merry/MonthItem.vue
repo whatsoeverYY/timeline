@@ -11,7 +11,7 @@
             </div>
             <div class="flex items-center text-gray-600">
                 <i class="ri-image-line mr-2 text-xs text-tm-pink-50"></i>
-                <span class="text-xs">{{ count }} photos</span>
+                <span class="text-xs text-tm-gray-80">{{ count }} photos</span>
             </div>
         </div>
         <div class="absolute left-[26px] -bottom-[15px] text-tm-purple-100">

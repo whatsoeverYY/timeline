@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -78,6 +79,22 @@ export default {
           30: '',
           40: '#ffd6e0',
           50: '#ffb6c1',
+        },
+        // Dark mode colors
+        'dark-bg': {
+          primary: '#1a1a2e',
+          secondary: '#16213e',
+          tertiary: '#0f172a',
+        },
+        'dark-accent': {
+          purple: '#8b7cf8',
+          pink: '#f472b6',
+          blue: '#60a5fa',
+        },
+        'dark-text': {
+          primary: '#f1f5f9',
+          secondary: '#cbd5e1',
+          muted: '#94a3b8',
         },
       },
     },

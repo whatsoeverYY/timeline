@@ -11,7 +11,7 @@
             class="flex-1 bg-gray-100 rounded-[20px] overflow-hidden relative shadow-md mb-1 min-h-[60%] flex items-center justify-center">
             <div class="w-full h-full relative">
                 <!-- 主图片展示 -->
-                <div class="w-full h-full flex items-center justify-center bg-black rounded-[20px] overflow-hidden">
+                <div class="w-full h-full flex items-center justify-center bg-white rounded-[20px] overflow-hidden">
                     <img :src="currentImage?.imagePath" :alt="currentImage?.desc"
                         class="max-w-full max-h-full object-contain transition-all duration-500 ease-in-out"
                         @error="handleImageError" />
@@ -22,7 +22,7 @@
             class="flex-1 bg-gray-100 rounded-[20px] overflow-hidden relative shadow-md mb-5 min-h-[60%] flex items-center justify-center">
             <div
                 class="w-full h-full flex flex-col items-center justify-center text-gray-400 text-center p-5 slide-transition">
-                <i class="ri-gallery-line text-6xl mb-4 text-purple-300"></i>
+                <i class="ri-gallery-line text-6xl mb-4 text-tm-purple-100"></i>
                 <h3 class="text-xl mb-2.5 text-gray-500">Your Photo Journey</h3>
                 <p class="text-sm max-w-[80%]">This is where your memories will be displayed. The slideshow will
                     automatically start from August 2024.
@@ -51,7 +51,7 @@
 
         <!-- Photo Information -->
         <div class="p-4 bg-purple-50 rounded-2xl mb-5 shadow-sm slide-transition">
-            <h3 class="text-lg text-purple-600 mb-1">Memories</h3>
+            <h3 class="text-lg text-tm-purple-500 mb-1">Memories</h3>
             <p class="text-sm text-gray-500">
                 <template v-if="currentMonthData">
                     {{ getDescription(currentImage) }}
@@ -76,7 +76,7 @@
             <!-- Month Indicator -->
             <div class="flex items-center bg-purple-50 px-5 py-2.5 rounded-full shadow-md">
                 <i class="ri-calendar-event-fill text-xl text-pink-300"></i>
-                <h2 class="font-sans text-purple-600 text-xl mx-2.5 my-0">{{ currentMonthData?.month }}</h2>
+                <h2 class="font-sans text-tm-purple-500 text-xl mx-2.5 my-0">{{ currentMonthData?.month }}</h2>
             </div>
 
             <!-- Playback Controls -->
@@ -121,7 +121,7 @@
             class="bg-gray-100 rounded-[16px] overflow-hidden relative shadow-md mb-3 h-[300px] sm:h-[350px] flex items-center justify-center">
             <div
                 class="w-full h-full flex flex-col items-center justify-center text-gray-400 text-center p-4 slide-transition">
-                <i class="ri-gallery-line text-4xl mb-3 text-purple-300"></i>
+                <i class="ri-gallery-line text-4xl mb-3 text-tm-purple-100"></i>
                 <h3 class="text-lg mb-2 text-gray-500">Your Photo Journey</h3>
                 <p class="text-xs max-w-[90%] text-center">This is where your memories will be displayed. The slideshow
                     will
@@ -134,7 +134,7 @@
         <div class="p-3 bg-purple-50 rounded-2xl mb-3 shadow-sm slide-transition">
             <div class="flex justify-between items-start mb-2">
                 <div class="flex-1">
-                    <h3 class="text-base text-purple-600 mb-1">Memories</h3>
+                    <h3 class="text-base text-tm-purple-500 mb-1">Memories</h3>
                     <p class="text-sm text-gray-500 pr-2">
                         <template v-if="currentMonthData">
                             {{ getDescription(currentImage) }}
@@ -147,7 +147,7 @@
                 <!-- Month Indicator - 移动端位置 -->
                 <div class="flex items-center bg-white px-3 py-1.5 rounded-full shadow-sm ml-2">
                     <i class="ri-calendar-event-fill text-sm text-pink-300"></i>
-                    <span class="font-sans text-purple-600 text-sm ml-1">
+                    <span class="font-sans text-tm-purple-500 text-sm ml-1">
                         {{ currentMonthData?.month || 'Timeline' }}</span>
                 </div>
             </div>

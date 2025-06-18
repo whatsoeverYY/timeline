@@ -11,12 +11,22 @@
             <SideBar />
             <MainContent />
         </div>
+
+        <!-- Lamp cord toggle for theme switching -->
+        <LampCordToggle 
+            :is-dark="isDarkMode" 
+            @toggle="toggleTheme"
+        />
     </div>
 </template>
 
 <script setup lang="ts">
 import MainContent from './MainContent.vue';
 import SideBar from './SideBar.vue';
+import LampCordToggle from '../LampCordToggle.vue';
+import { useTheme } from '@/composable/useTheme';
+
+const { isDarkMode, toggleTheme } = useTheme();
 </script>
 <style>
 .theme-merry {

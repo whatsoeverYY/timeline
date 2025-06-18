@@ -16,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Compress',
     component: () => import('./components/ImageCompress.vue'),
   },
+  {
+    path: '/ai',
+    name: 'AICaption',
+    component: () => import('./components/AICaption.vue'),
+  },
 ]
 
 const router = createRouter({

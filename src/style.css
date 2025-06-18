@@ -1,3 +1,139 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dark mode base styles */
+.dark {
+  color-scheme: dark;
+}
+
+/* Dark mode theme variables */
+.dark .theme-merry {
+  /* Override gradients for dark mode */
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+}
+
+/* Dark mode sidebar */
+.dark .sidebar {
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 50%, #0f172a 100%);
+}
+
+.dark .sidebar-mobile {
+  background: linear-gradient(90deg, #16213e 0%, #1a1a2e 50%, #0f172a 100%);
+}
+
+/* Dark mode content area */
+.dark .main-content {
+  background: linear-gradient(135deg, #0f172a 0%, #16213e 100%);
+}
+
+/* Dark mode text colors */
+.dark h1,
+.dark h2,
+.dark h3 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-tm-purple-500 {
+  color: #8b7cf8 !important;
+}
+
+.dark .text-tm-gray-80 {
+  color: #9ca3af !important;
+}
+
+.dark .text-tm-gray-40 {
+  color: #94a3b8 !important;
+}
+
+/* Dark mode backgrounds */
+.dark .bg-white {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+.dark .bg-tm-pink-10 {
+  background-color: #1e293b !important;
+}
+
+.dark .bg-tm-blue-40 {
+  background-color: #1e40af !important;
+}
+
+.dark .bg-tm-purple-500 {
+  background-color: #8b7cf8 !important;
+}
+
+/* Dark mode hover states */
+.dark .hover\\:bg-tm-purple-100:hover {
+  background-color: #7c3aed !important;
+}
+
+.dark .hover\\:text-tm-purple-100:hover {
+  color: #a78bfa !important;
+}
+
+/* Dark mode borders and shadows */
+.dark .border {
+  border-color: #334155 !important;
+}
+
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-lg {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Dark mode form elements */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #8b7cf8 !important;
+  box-shadow: 0 0 0 1px #8b7cf8 !important;
+}
+
+/* Dark mode timeline elements */
+.dark .before\\:bg-gradient-to-b::before {
+  background: linear-gradient(to bottom, #f472b6, #60a5fa, #8b7cf8) !important;
+}
+
+/* Dark mode image containers */
+.dark .image-container {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* Dark mode buttons */
+.dark button {
+  color: inherit;
+}
+
+.dark .bg-s-rose-40 {
+  background-color: #dc2626 !important;
+}
+
+.dark .hover\\:bg-s-rose-50:hover {
+  background-color: #b91c1c !important;
+}
+
+.dark .bg-s-blue-40 {
+  background-color: #1e40af !important;
+}
+
+.dark .hover\\:bg-s-blue-40:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* Smooth transition for theme changes */
+.theme-merry,
+.theme-merry * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
