@@ -97,6 +97,11 @@ export default {
           muted: '#94a3b8',
         },
       },
+      borderWidth: {
+        '3': '3px',
+        '4': '4px',
+        '5': '5px',
+      },
     },
   },
   plugins: [],
