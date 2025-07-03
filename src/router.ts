@@ -31,6 +31,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'VaccineRecord',
     component: () => import('./pages/VaccineRecord.vue'),
   },
+  {
+    path: '/grow',
+    name: 'GrowthMilestones',
+    component: () => import('./pages/GrowthMilestones.vue'),
+  },
 ]
 
 const router = createRouter({
