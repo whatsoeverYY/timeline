@@ -1,7 +1,40 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 dark:from-gray-900 dark:to-purple-900 relative overflow-hidden">
+    <!-- 导航栏 -->
+    <div class="flex items-center justify-between px-8 pt-8 pb-4 relative z-10">
+      <router-link 
+        to="/" 
+        class="flex items-center text-pink-600 dark:text-pink-400 hover:text-pink-800 dark:hover:text-pink-300 transition-colors"
+      >
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+        返回相册
+      </router-link>
+      <div class="flex items-center space-x-4">
+        <router-link 
+          to="/compress" 
+          class="text-pink-600 dark:text-pink-400 hover:text-pink-800 dark:hover:text-pink-300 transition-colors text-sm"
+        >
+          图片压缩
+        </router-link>
+        <router-link 
+          to="/ai" 
+          class="text-pink-600 dark:text-pink-400 hover:text-pink-800 dark:hover:text-pink-300 transition-colors text-sm"
+        >
+          AI标注
+        </router-link>
+        <router-link 
+          to="/vaccine" 
+          class="text-pink-600 dark:text-pink-400 hover:text-pink-800 dark:hover:text-pink-300 transition-colors text-sm"
+        >
+          疫苗记录
+        </router-link>
+      </div>
+    </div>
+    
     <!-- 页面标题 -->
-    <div class="text-center pt-12 pb-8 relative z-10">
+    <div class="text-center pt-4 pb-8 relative z-10">
       <h1 class="text-4xl font-bold text-pink-600 dark:text-pink-400 tracking-wide">life-line</h1>
     </div>
 

@@ -26,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'AllPhotos',
     component: () => import('./pages/AllPhotos.vue'),
   },
+  {
+    path: '/vaccine',
+    name: 'VaccineRecord',
+    component: () => import('./pages/VaccineRecord.vue'),
+  },
 ]
 
 const router = createRouter({

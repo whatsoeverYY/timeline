@@ -11,7 +11,26 @@
           返回相册
         </router-link>
         <h1 class="text-3xl font-bold text-tm-purple-500">图片压缩工具</h1>
-        <div class="w-20"></div> <!-- Spacer for center alignment -->
+        <div class="flex items-center space-x-4">
+          <router-link 
+            to="/ai" 
+            class="text-tm-purple-500 hover:text-tm-purple-100 transition-colors text-sm"
+          >
+            AI标注
+          </router-link>
+          <router-link 
+            to="/vaccine" 
+            class="text-tm-purple-500 hover:text-tm-purple-100 transition-colors text-sm"
+          >
+            疫苗记录
+          </router-link>
+          <router-link 
+            to="/all" 
+            class="text-tm-purple-500 hover:text-tm-purple-100 transition-colors text-sm"
+          >
+            照片墙
+          </router-link>
+        </div>
       </div>
       
       <!-- Compression Settings -->
