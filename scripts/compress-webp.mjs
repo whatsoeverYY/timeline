@@ -13,7 +13,7 @@ const SOURCE_DIR = path.resolve(__dirname, '../src/assets/source')
 const OUTPUT_DIR = path.resolve(__dirname, '../src/assets/compressed')
 
 // 支持的图片格式
-const SUPPORTED_FORMATS = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff']
+const SUPPORTED_FORMATS = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp']
 
 /**
  * 确保目录存在，如果不存在则创建

@@ -7,11 +7,15 @@
 ## 原始相片上传
 
 将你想要展示的原始照片上传到 src/assets/old 目录下（支持 JPG、JPEG、PNG 格式）。
-在项目根目录下，执行以下命令：
+在项目根目录下，执行以下命令，对文件进行重命名：
 
 ```bash
-npm run organize-old
+npm run rename-images-by-exif
 ```
+
+## 压缩图片
+
+启动项目，打开/compress路由，上传图片进行压缩，下载，存放到 src/assets/source目录下
 
 ## 压缩处理后的相片上传
 
